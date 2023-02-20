@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+		<style>
+			*
+			{
+				margin: 0;
+				padding: 0;
+			}
+			body {
+				background: #747d8c;
+				display: flex;
+				width: 100vw;
+				height: 100vh;
+				align-items: center;
+				justify-content: center;
+				gap: 40px;
+			}
+			ul{
+				position: relative;
+				transform: skewY(-15deg);
+			}
+			ul li{
+				position: relative;
+				height: 30px;
+				line-height: 30px;
+				width: 120px;
+				padding: 5px 10px;
+				list-style: none;
+				background: #3e3f46;
+				transition: 0.5s;
+				z-index: calc(9 - var(--i));
+			}
+			ul li:hover{
+				background: var(--bkg);
+				transform: translate(-40px);
+			}
+			ul li::before{
+				content: ' ';
+				width: 40px;
+				height: 40px;
+				background: #3e3f46;
+				filter: brightness(0.7);
+				position: absolute;
+				top: 0;
+				left: -40px;
+				transform-origin: right;
+				transform: skewY(45deg);
+				transition: 0.5s;
+			}
+			ul li:hover::before{
+				background: var(--bkg);
+				filter: brightness(0.7);
+			}
+			ul li::after{
+				content: ' ';
+				width: 100%;
+				height: 40px;
+				position: absolute;
+				top: -40px;
+				left: 0;
+				background: #3e3f46;
+				filter: brightness(0.9);
+				transform-origin: bottom;
+				transform: skewX(45deg);
+				transition: 0.5s;
+			}
+			ul li:hover::after{
+				background: var(--bkg);
+				filter: brightness(0.9);
+			}
+			ul li a{
+				text-decoration: none;
+				color: #999;
+				display: block;
+				text-transform: uppercase;
+				letter-spacing: 0.05em;
+				transition: 0.5s;
+			}
+			ul li:hover a{
+				color: #fff;
+			}
+			ul li:last-child::after 
+			{
+			  box-shadow: -120px 120px 20px rgba(0,0,0,0.25);
+			}
+			ul li a span{
+				position: absolute;
+				top: 0;
+				left: -40px;
+				width: 40px;
+				text-align: center;
+				height: 100%;
+				transform-origin: right;
+				transform: skewY(45deg);
+				transition: 0.5s;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				font-size: 1.25em;
+				opacity: 0.5;
+			}
+			ul li:hover a span{
+				opacity: 1;
+			}
+		</style>
+	</head>
+	<body>
+		<ul>
+			<li style="--i:1;--bkg: #7bed9f;"><a><span><i class="fa fa-caret-right"></i></span> 网站首页</a></li>
+			<li style="--i:2;--bkg: #2ed573;"><a><span><i class="fa fa-caret-right"></i></span> 网站首页</a></li>
+			<li style="--i:3;--bkg: #70a1ff;"><a><span><i class="fa fa-caret-right"></i></span> 网站首页</a></li>
+			<li style="--i:4;--bkg: #5352ed;"><a><span><i class="fa fa-caret-right"></i></span> 网站首页</a></li>
+			<li style="--i:5;--bkg: #1e90ff;"><a><span><i class="fa fa-caret-right"></i></span> 网站首页</a></li>
+			<li style="--i:6;--bkg: #3742fa;"><a><span><i class="fa fa-caret-right"></i></span> 网站首页</a></li>
+			<li style="--i:7;--bkg: #eccc68;"><a><span><i class="fa fa-caret-right"></i></span> 网站首页</a></li>
+			<li style="--i:8;--bkg: #ffa502;"><a><span><i class="fa fa-caret-right"></i></span> 网站首页</a></li>
+			<li style="--i:9;--bkg: #ff7f50;"><a><span><i class="fa fa-caret-right"></i></span> 网站首页</a></li>
+		</ul>
+	</body>
+</html>
