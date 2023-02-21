@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+			.card{
+				width: 220px;
+				height: 220px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				background: #2a2a2a;
+			}
+			.percent{
+				width: 150px;
+				height: 150px;
+				position: relative;
+			}
+			.dot{
+				position: absolute;
+				inset: 5px;
+				z-index: 10;
+				animation: animateDot 2s linear forwards;
+			}
+			@keyframes animateDot {
+				0% {
+					transform: rotate(0deg);
+				}
+			
+				100% {
+					transform: rotate(calc(3.6deg * var(--num)));
+				}
+			}
+			.dot::before{
+				content: ' ';
+				position: absolute;
+				width: 10px;
+				height: 10px;
+				background: var(--clr);
+				border-radius: 50%;
+				top: -5px;
+				left: 50%;
+				transform: translateX(-50%);
+				box-shadow: 0 0 10px var(--clr), 0 0 30px var(--clr);
+			}
+			svg {
+				width: 150px;
+				height: 150px;
+				transform: rotate(270deg);
+			}
+			svg circle{
+				width: 100%;
+				height: 100%;
+				fill: transparent;
+				stroke-width: 2;
+				stroke: #191919;
+				transform: translate(5px, 5px);
+				
+			}
+			svg circle:nth-child(2) {
+				stroke: var(--clr);
+				stroke-dasharray: 440;
+				stroke-dashoffset: calc(440 - (440 * var(--num)) / 100);
+				opacity: 0;
+				animation: fadeIn 1s linear forwards;
+				animation-delay: 2s;
+			}
+			@keyframes fadeIn {
+				0% {
+					opacity: 0;
+				}
+			
+				100% {
+					opacity: 1;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="card">
+			<div class="percent" style="--clr: #e69a0c; --num: 80;">
+				<div class="dot"></div>
+				<svg>
+					<circle cx="70" cy="70" r="70"></circle>
+					<circle cx="70" cy="70" r="70"></circle>
+				</svg>
+			</div>
+		</div>
+
+	</body>
+</html>

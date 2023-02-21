@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>创意菜单栏的文本动画效果</title>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+			body{
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				height: 100vh;
+				width: 100vw;
+				background: #34495e;
+			}
+			ul{
+				position: relative;
+				list-style: none;
+				display: flex;
+				flex-direction: column;
+				gap: 20px;
+			}
+			ul li
+			{
+					position: relative;
+					list-style: none;
+			}
+			ul li a{
+				font-size: 3rem;
+				letter-spacing: 4px;
+				text-transform: uppercase;
+				text-decoration: none;
+				-webkit-text-stroke: 1px rgba(255,255,255,0.5);
+				color: transparent;
+				position: relative;
+			}
+			ul li a::before 
+			{
+				content: attr(data-text);
+				position: absolute;
+				color: var(--clr);
+				width: 0%;
+				overflow: hidden;
+				border-right: 8px solid var(--clr);
+				transition: 2s;
+				-webkit-text-stroke: 1px  var(--clr);
+			}
+			ul li a:hover:before
+			{
+					width: 100%;
+					filter: drop-shadow(0 0 25px var(--clr));
+			}
+		</style>
+	</head>
+	<body>
+		<ul>
+			<li style="--clr:#00ade1;">
+				<a data-text="&nbsp;home">&nbsp;home&nbsp;</a>
+			</li>
+			<li data-text="about" style="--clr:#e67e22;">
+				<a data-text="&nbsp;about">&nbsp;about</a>
+			</li>
+			<li data-text="services" style="--clr:#f1c40f;">
+				<a data-text="&nbsp;services">&nbsp;services</a>
+			</li>
+			<li data-text="team" style="--clr:#e74c3c;">
+				<a data-text="&nbsp;team">&nbsp;team</a>
+			</li>
+			<li data-text="contact" style="--clr:#1abc9c;">
+				<a data-text="&nbsp;contact">&nbsp;contact</a>
+			</li>
+		</ul>
+	</body>
+</html>
