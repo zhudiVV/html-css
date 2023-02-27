@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>07—CSS实现响应式产品介绍的Hover效果</title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+				font-family: 'Poppins', sans-serif;
+			}
+
+			body {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				min-height: 100vh;
+			}
+
+			.container {
+				position: relative;
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
+				align-items: center;
+			}
+
+			.hexagon {
+				position: relative;
+				width: 350px;
+				height: 400px;
+				margin: 50px 20px 70px;
+			}
+
+			.hexagon:before {
+				content: '';
+				position: absolute;
+				bottom: -70px;
+				width: 100%;
+				height: 60px;
+				background: radial-gradient(rgba(0, 0, 0, 0.15), transparent, transparent);
+				border-radius: 50%;
+				transition: 0.5s;
+			}
+
+			.hexagon:hover:before {
+				opacity: 0.8;
+				transform: scale(0.8);
+			}
+
+			.hexagon .shape {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
+				transition: 0.5s;
+			}
+
+			.hexagon:hover .shape {
+				transform: translateY(-30px);
+			}
+
+			.hexagon .shape img {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+
+			.hexagon .shape .content {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				background: linear-gradient(45deg, #727373, rgba(99, 104, 107, 0.5));
+				opacity: 0;
+				transition: 0.5s;
+				padding: 20px;
+				text-align: center;
+				color: #fff;
+			}
+
+			.hexagon:hover .shape .content {
+				opacity: 1;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<!-- 01 hexagon begin-->
+			<div class="hexagon">
+				<div class="shape">
+					<img src="img1.png">
+					<div class="content">
+						<div>
+							<h2>主动的人</h2>
+							<p>主动的人，往往也是更加努力的人，他们的创造力也会更强，因为他们懂得自己的命运在自己手中，不想供手让别人操控自己的命运</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--01 hexagon end-->
+			<div class="hexagon">
+				<div class="shape">
+					<img src="img2.png">
+					<div class="content">
+						<div>
+							<h2>主动的人</h2>
+							<p>往往运气也会越来越好，因为他们清楚的知道自己想要什么，他们关注自己的目标而努力，因此会朝着目标前进，自然就会运气好，运气越好越努力，越努力运气越好</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--02 hexagon end-->
+			<div class="hexagon">
+				<div class="shape">
+					<img src="img3.png">
+					<div class="content">
+						<div>
+							<h2>主动的人</h2>
+							<p>他们会拥有更多的机会，因为他们知道机会从来都不会从天而降，只有抓住机会才会拥有成功的可能，这个世界有很多机会，就是看机会来临时，你能把握住</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--03hexagon end-->
+			<div class="hexagon">
+				<div class="shape">
+					<img src="img4.png">
+					<div class="content">
+						<div>
+							<h2>主动的人</h2>
+							<p>他们也会更容易成功，因为他们做事情不拖延，没有懒癌症，心态也会更加积极主动，对自己做的事情负责，能够做到今日事今日毕，甚至是提前完成工作与自己的任务</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--04 hexagon end-->
+		</div>
+	</body>
+</html>
