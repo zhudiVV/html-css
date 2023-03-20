@@ -8,39 +8,29 @@
 				margin: 0;
 				padding: 0;
 				box-sizing: border-box;
-				font-family: 'Poppins', sans-serif;
 			}
-
 			section {
-				position: relative;
-				background: #00a6bc;
+				background: #2980b9;
+				min-height: 100%;
 				min-height: 100vh;
-				overflow: hidden;
 				display: flex;
-				justify-content: center;
 				align-items: center;
+				justify-content: center;
 			}
-
-			.box {
-				position: relative;
-				min-width: 350px;
-				min-height: 400px;
+			.box{
 				background: rgba(255, 255, 255, 0.1);
 				box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
 				border: 1px solid rgba(255, 255, 255, 0.5);
 				border-right: 1px solid rgba(255, 255, 255, 0.2);
 				border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 				border-radius: 10px;
-				z-index: 10;
 				padding: 20px;
 				backdrop-filter: blur(25px);
 			}
-
 			.box h3 {
 				color: #fff;
 				margin-bottom: 20px;
 			}
-
 			.box .list {
 				position: relative;
 				display: flex;
@@ -52,14 +42,12 @@
 				transition: 0.5s;
 				overflow: hidden;
 			}
-
 			.box .list:hover {
 				background: #fff;
 				box-shadow: -15px 30px 50px rgba(0, 0, 0, 0.5);
 				transform: scale(1.15) translateX(30px) translateY(-15px);
 				z-index: 1000;
 			}
-
 			.box .list .imgBx {
 				position: relative;
 				width: 60px;
@@ -68,7 +56,6 @@
 				overflow: hidden;
 				margin-right: 10px;
 			}
-
 			.box .list .imgBx img {
 				position: absolute;
 				top: 0;
@@ -77,14 +64,12 @@
 				height: 100%;
 				object-fit: cover;
 			}
-
 			.box .list .content {
 				display: flex;
 				flex-direction: column;
 				justify-content: center;
 				color: #fff;
 			}
-
 			.box .list .content .rank {
 				position: absolute;
 				right: -50px;
@@ -92,22 +77,18 @@
 				transition: 0.5s;
 				font-size: 2em;
 			}
-
 			.box .list:hover .content .rank {
 				right: 20px;
 			}
-
 			.box .list .content h4 {
 				line-height: 1.2em;
 				font-weight: 600;
 				transition: 0.5s;
 			}
-
 			.box .list .content p {
 				font-size: 0.75em;
 				transition: 0.5s;
 			}
-
 			.box .list:hover .content h4,
 			.box .list:hover .content p {
 				color: #333;
@@ -120,102 +101,12 @@
 				<h3>优秀自媒体前十专家排行榜</h3>
 				<div class="list">
 					<div class="imgBx">
-						<img src="img1.jpg">
+						<img src="07/img1.jpg">
 					</div>
 					<div class="content">
 						<h2 class="rank">1</h2>
 						<h4>王二</h4>
 						<p>前端开发工程师</p>
-					</div>
-				</div>
-				<div class="list">
-					<div class="imgBx">
-						<img src="img2.jpg">
-					</div>
-					<div class="content">
-						<h2 class="rank">2</h2>
-						<h4>张三</h4>
-						<p>后端开发工程师</p>
-					</div>
-				</div>
-				<div class="list">
-					<div class="imgBx">
-						<img src="img3.jpg">
-					</div>
-					<div class="content">
-						<h2 class="rank">3</h2>
-						<h4>李四</h4>
-						<p>Photoshop专家</p>
-					</div>
-				</div>
-				<div class="list">
-					<div class="imgBx">
-						<img src="img4.jpg">
-					</div>
-					<div class="content">
-						<h2 class="rank">4</h2>
-						<h4>王五</h4>
-						<p>Illustrator专家</p>
-					</div>
-				</div>
-				<div class="list">
-					<div class="imgBx">
-						<img src="img5.jpg">
-					</div>
-					<div class="content">
-						<h2 class="rank">5</h2>
-						<h4>赵六</h4>
-						<p>视频剪辑专家</p>
-					</div>
-				</div>
-				<div class="list">
-					<div class="imgBx">
-						<img src="img6.jpg">
-					</div>
-					<div class="content">
-						<h2 class="rank">6</h2>
-						<h4>甄七</h4>
-						<p>CSS技术专家</p>
-					</div>
-				</div>
-				<div class="list">
-					<div class="imgBx">
-						<img src="img7.jpg">
-					</div>
-					<div class="content">
-						<h2 class="rank">7</h2>
-						<h4>郭八</h4>
-						<p>web前端开发技术专家</p>
-					</div>
-				</div>
-				<div class="list">
-					<div class="imgBx">
-						<img src="img8.jpg">
-					</div>
-					<div class="content">
-						<h2 class="rank">8</h2>
-						<h4>廖九</h4>
-						<p>Vue技术专家</p>
-					</div>
-				</div>
-				<div class="list">
-					<div class="imgBx">
-						<img src="img9.jpg">
-					</div>
-					<div class="content">
-						<h2 class="rank">9</h2>
-						<h4>JavaScript大叔</h4>
-						<p>JavaScript技术专家</p>
-					</div>
-				</div>
-				<div class="list">
-					<div class="imgBx">
-						<img src="img10.jpg">
-					</div>
-					<div class="content">
-						<h2 class="rank">10</h2>
-						<h4>杨小爱</h4>
-						<p>吃货博主专家</p>
 					</div>
 				</div>
 			</div>
